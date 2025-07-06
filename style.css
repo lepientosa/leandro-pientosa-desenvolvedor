@@ -1,0 +1,380 @@
+* .container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /*fundo claro*/
+    color: #333; /*cor do texto escura*/
+  } 
+
+.menu {
+background-color: #333;
+position: fixed;
+top: 0;
+width: 100%;
+max-height: max-content;
+z-index: 1000; /*menu sempre no topo da pagina*/
+}
+/*retirada de bullets*/
+.menu ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ display: flex; /*display que se adapta*/
+ flex-wrap: wrap; /*quebra de linha para mobile first*/
+ justify-content:space-between;
+ width: 100%; 
+}
+
+.menu a {
+ display: block;
+ color: white;
+ text-align: center;
+ padding: 14px 10px;
+ text-decoration: none;
+ flex-grow: 1;
+} 
+  /*quando mouse está por cima do menu aparece um underline na cor azul*/
+ .menu a:hover {
+  text-decoration: underline;
+  text-decoration-color: blue; 
+ }
+  .menu a:focus {
+   text-decoration: underline;
+   text-decoration-color: blue; 
+  }
+
+main {
+ padding-top: 60px;
+ min-height: calc(100vh - 60px); /*variavel que calcula 100% de visualização menos a altura do menu*/
+display: flex;
+flex-direction: column; /*formato de coluna*/  
+align-items: center;
+justify-content: flex-start; /* */
+}
+
+
+.intro {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+ padding: 30px 15px;
+ background-color: lightgrey;
+ border-bottom: 2px solid lightsteelblue;
+ width: 100%;
+ box-sizing: border-box;
+}
+
+.intro h1 {
+  font-size: 1.8em;
+margin-bottom: 10px;
+color: #222;
+}
+ 
+.intro h3 {
+  margin-bottom: 15px;
+  color: black;
+  font-size: 1.2em;
+}
+
+.intro p {
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.sobre {
+ padding: 40px 20px ;
+ font-size: 1.1em;
+ color: #444;
+ line-height: 1.8;
+ max-width: 900px;
+ margin: 20px auto;
+ background-color: white;
+ border-radius: 8px;
+ box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}    
+
+h3 {
+color: #864e0e;
+margin-bottom: 15px;
+}
+
+ul {
+  list-style: disc inside;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+li {
+ margin-bottom: 8px;
+}
+article{
+   margin-bottom: 30px;
+   border-left: 4px solid lightsteelblue;
+   padding-left: 15px;
+}
+
+form {
+  width: 90%;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+width: 100%;
+padding: 10px;
+margin-bottom: 15px;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+outline: 2px solid #4CAF50;
+border-color: #4CAF50;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  border-radius: 25px;
+  transition: 0.5s ease-in-out;
+}
+
+footer {
+    background-color: grey; 
+    color: black;
+    
+    display: flex; /* Torna o footer um contêiner flex */
+    flex-direction: column; /* Organiza os itens filhos em uma coluna (um abaixo do outro) */
+    justify-content: center; /* Centraliza os itens na coluna (verticalmente) */
+    align-items: center; /* Centraliza os itens ao longo do eixo cruzado (horizontalmente) */
+    
+    padding: 30px 20px; /* Padding padrão para o rodapé */
+    margin-top: 40px; /* Espaço acima do rodapé para separar do conteúdo */
+    font-size: 0.9em;
+    text-align: center; /* Mantém o texto dentro do P e DIV centralizado */
+}
+
+footer p {
+    margin-bottom: 15px; /* Espaço abaixo do texto do copyright e do texto "encontre-me" */
+}
+
+.social-links { 
+    margin-top: 20px; /* Espaço acima da div de links sociais */
+    display: flex; /* Torna a div social-links um contêiner flex (para os ícones) */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    justify-content: center; /* Centraliza os ícones dentro da div social-links */
+    align-items: center; /* Alinha verticalmente os ícones */
+    gap: 20px; /* Espaço entre os ícones */
+}
+
+.social-links p {
+    color: black; 
+    margin: 0 0 15px 0; /* Ajusta margem: 0 para topo/direita/esquerda, 15px para baixo */
+    font-style: italic;
+    font-size: 1em;
+    width: 100%; /* Faz o texto ocupar a largura total do social-links */
+    text-align: center; /* texto centralizado */
+}
+
+.social-links a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    transition: transform 0.3s ease; /* Transição para o aumento de tamanho */
+    display: flex; /* Para centralizar a imagem dentro do link */
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links a img {
+    width: 28px; /* Tamanho padrão dos ícones (ajuste conforme o desejado) */
+    height: 28px;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1); /* Faz o ícone crescer um pouco no hover */
+}
+#status {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 15px;
+    background-color: #ff4444;
+    color: white;
+    border-radius: 5px;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Media Queries para telas maiores */
+@media (min-width: 768px) { 
+  .menu a {
+  padding: 16px 20px; /* Mais espaço para links do menu */
+  font-size: 1.1em; /* Aumenta o tamanho da fonte */
+  }
+   .container {
+    max-width: 700px;
+  } 
+  .intro {
+    padding: 40px 20px; 
+  }
+
+  .intro h1 {
+    font-size: 2.2em;
+  }
+
+  .intro h3 {
+    font-size: 1.4em; 
+  }
+
+  .intro p {
+    max-width: 900px; /* Aumenta o tamanho máximo do texto */
+    font-size: 1.1em; /* Aumenta o tamanho da fonte */
+  }
+
+  .sobre {
+    padding: 50px 30px;
+    max-width: 1000px; /* Aumenta o tamanho máxima */
+    font-size: 1.2em; 
+  }
+
+  form {
+    max-width: 700px; /* Limita o tamanho do formulário */
+    padding: 20px; /* Mais espaço interno */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 1.1em; 
+    padding: 12px; /* Mais espaço interno */
+  }
+
+  button[type="submit"] {
+    padding: 12px; /* tamanho do botão*/
+    font-size: 1.1em; /* Texto maior no botão */
+  }
+}
+
+/* Rodapé em telas maiores que 768px */
+    footer {
+        padding: 40px 20px; 
+    }
+    .social-links {
+        gap: 30px; /* Mais espaço entre ícones */
+    }
+    .social-links p {
+        width: auto; /* Permite que o texto fique na mesma linha dos ícones */
+        margin-bottom: 0;
+        margin-right: 15px; /* Espaço à direita do texto */
+    }
+    .social-links a img {
+        width: 32px; /* Ícones um pouco maiores em tablets */
+        height: 32px;
+    }
+
+@media (min-width: 1200px) { 
+    .menu {
+    padding: 0 50px; /* Adiciona espaço nas laterais do menu */
+  }
+
+  .menu ul {
+    justify-content: center; /* Centraliza os links do menu */
+    gap: 20px; /* Espaço entre os links */
+  }
+
+  .menu a {
+    padding: 18px 30px; /* Links ainda mais espaçados */
+    font-size: 1.2em; /* Texto maior */
+  }
+  .container {
+    max-width: 1100px;
+  } 
+  .intro {
+    padding: 50px 30px; /* Mais espaço na introdução */
+  }
+
+  .intro h1 {
+    font-size: 2.5em; /* Título ainda maior */
+  }
+
+  .intro h3 {
+    font-size: 1.6em; /* Subtítulo maior */
+  }
+
+  .intro p {
+    max-width: 1000px; /* Texto mais largo */
+    font-size: 1.2em; /* Texto maior */
+  }
+
+  .sobre {
+    max-width: 950px; /* Mais larga para aproveitar o espaço */
+    padding: 60px 40px; /* Mais espaço interno */
+    font-size: 1.3em; /* Texto maior */
+  }
+
+  form {
+    max-width: 800px; /* Formulário mais largo */
+    padding: 25px; /* Mais espaço interno */
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 1.2em; /* Campos com texto maior */
+    padding: 15px; /* Mais espaço interno */
+  }
+
+  button[type="submit"] {
+    padding: 15px; /* Botão maior */
+    font-size: 1.2em; /* Texto maior */
+  }
+
+  article {
+    padding-left: 20px; /* Mais espaço à esquerda para artigos */
+    border-left-width: 5px; /* Borda mais grossa para destaque */
+  }
+}
+/* Rodapé em telas maiores que 1200px */
+    footer {
+        display: flex;
+        justify-content: center;
+        padding: 50px 30px; /* Mais padding no rodapé */
+    }
+    .social-links {
+      gap: 40px; /* Ainda mais espaço entre ícones */  
+    }
+    .social-links a img {
+        width: 38px; /* Ícones maiores em desktops grandes */
+        height: 38px;
+    }

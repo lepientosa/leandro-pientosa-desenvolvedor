@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"
+    <title></title>
+    
+</head>
+<body>
+<header>
+    <nav class="menu">
+    <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projetos.html">Projetos</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="contato.html">Contato</a></li>
+    </ul>
+   </nav>
+  </header>
+  <div id="status">Você está offline! Verifique sua conexão.</div>
+   <form>
+  <h2>Entre em Contato conosco</h2>
+   <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" placeholder="Seu Nome"><br><br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com"><br><br>
+  <label for="mensagem">Mensagem:</label>
+  <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem aqui"></textarea><br><br>
+  <button type="submit">Enviar</button>
+</form>
+<footer>
+    <p>&copy; 2025 Leandro Pientosa. Todos os direitos reservados</p>
+    <div class="social-links">
+    <p>Ou, se preferir, me encontre nas redes sociais:</p>
+<a href="https://linkedin.com/in/leandro-pientosa-9a6517373/" target="_blank"><img src="linkedin-svgrepo-com.svg"></a> 
+<a href="https://github.com/lepientosa" target="_blank"><img src="github-svgrepo-com.svg"></a>
+    </div> 
+</footer>
+<script src="offline-notification.js"></script>
+</body>
+</html>
